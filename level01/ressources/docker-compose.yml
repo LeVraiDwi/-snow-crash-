@@ -1,0 +1,8 @@
+services:
+  john:
+    image: john:inc
+    build: ./john
+    restart: always
+    tty: true
+    container_name: john-container
+    stdin_open: true

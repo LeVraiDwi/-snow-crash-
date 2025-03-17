@@ -1,0 +1,17 @@
+En regardant dans le fichier /etc/passwd, on voit une ligne etrange
+    flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
+
+Le fichier /etc/passwd est un fichier séparé par deux-points qui contient les informations suivantes :
+    Nom d'utilisateur
+    Mot de passe chiffré
+    Numéro d'ID utilisateur (UID)
+    Numéro d'ID groupe de l'utilisateur (GID)
+    Nom complet de l'utilisateur (GECOS)
+    Répertoire de base de l'utilisateur
+    shell de connexion
+
+
+en utilisant john (dans le docker) un logiciel qui permet de decrypter les hash on obtient le mot de passe:
+    echo "42hDRfypTqqnw" > pass
+    john --show pass
+    abcdefg

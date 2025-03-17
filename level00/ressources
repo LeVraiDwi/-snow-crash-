@@ -1,0 +1,9 @@
+Trouver les fichiers que qui appartiennent au user:
+    find / -user flag00 2>/dev/null
+
+On trouve deux fichier avec le mot de passe ecrit en code cesard:
+    https://cryptii.com/pipes/caesar-cipher
+
+On valide:
+    su flag00
+    password : nottoohardhere
